@@ -9,9 +9,11 @@
 //            - added checksum to serial comms
 
 // v1.4  mmcp - extended M114 to report limit switches as well as co-ordinates
+
+// v1.5 Noah Levy - My Goal is to make it so that both steppers can be controlled simoultaneously
 //============================================================================
 
-#define FIRMWARE_VERSION "v1.4"
+#define FIRMWARE_VERSION "v1.5"
 
 #include <math.h>
 #include <wiring.h>
