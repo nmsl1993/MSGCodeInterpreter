@@ -15,8 +15,9 @@ void init_process_string()
 void process_string(char instruction[], int size)
 {
   boolean result;
-  
   if (DebugLevel > 1) {
+    
+    Serial.print("apong");
     Serial.println(instruction);
   }
 

@@ -21,7 +21,9 @@
 #include <HardwareSerial.h>
 #include <AFMotor.h>
 
+//Noah Testing ....
 
+boolean hasbeenweird = false;
 
 //Steppers=====================================================================
 Servo myservo;  // create servo object to control a servo 
@@ -105,7 +107,7 @@ boolean steppers = false;
 // 1 = short
 // 2 = verbose
 //=============
-int DebugLevel = 1;
+int DebugLevel = 2;
 
 void setup()
 {
@@ -122,6 +124,17 @@ void setup()
 
 void loop()
 {
+  /*
+  if(!hasbeenweird)
+  {
+    for(int i = 0; i < 200; i++)
+    {
+   forwardstep1();
+  forwardstep2();
+    }
+ hasbeenweird = true; 
+  }
+  */
   // read in characters if we got them
   //==================================
   if (Serial.available() > 0) {

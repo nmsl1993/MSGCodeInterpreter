@@ -53,16 +53,21 @@ if ((delta_steps.x==0) && (delta_steps.y ==0)) // if there is no move
     
 else if ((delta_steps.x) !=0 && (delta_steps.y ==0)) //if only x is moving
     {
+        Serial.print(current_steps.x);
+      Serial.print(" cs x ds x ");
+      Serial.println(delta_steps.x);
       do
         {
              if (current_steps.x < target_steps.x)    //is x running backwards or forwards? 
                     {
+                      
                       forwardstep1();
                     }      
               else   
                     {
                      backwardstep1();
                     }
+                    Serial.println("move! 1");
              counter++;
           }while (counter<delta_steps.x);
     }      
@@ -72,20 +77,24 @@ else if ((delta_steps.x) !=0 && (delta_steps.y ==0)) //if only x is moving
 else if ((delta_steps.y) !=0 && (delta_steps.x ==0)) //if only y is moving
 
     {
-
-      do 
+      Serial.print(current_steps.y);
+      Serial.print(" cs y ds y ");
+      Serial.println(delta_steps.y);
+       do
         {
-             if (current_steps.y < target_steps.y)    //is y running backwards or forwards? 
+             if (current_steps.y < target_steps.y)    //is x running backwards or forwards? 
                     {
+                      
                       forwardstep2();
                     }      
               else   
                     {
                      backwardstep2();
                     }
+                    Serial.println("move! 1");
              counter++;
-          }while (counter<delta_steps.x);
-    }      
+          }while (counter<delta_steps.y);
+    }       
 
 
 
