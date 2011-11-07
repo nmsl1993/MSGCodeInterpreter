@@ -107,7 +107,7 @@ boolean steppers = false;
 // 1 = short
 // 2 = verbose
 //=============
-int DebugLevel = 2;
+int DebugLevel = 1;
 
 void setup()
 {
